@@ -20,32 +20,45 @@ if __name__ == '__main__':
   ).to("cuda")
   interface = Interface(pipeline)
   # Seconds in the song
-  duration = 240
-  audio_offsets = [0, 5, 10, 15, 20, 25, 30, 35, 40] # list(range(0, duration, 2))
-  qualifiers = ','.join(['anime', 'ghibli', 'oil painting' 'high resolution', 'detailed', '4K'])
-  hero = 'ballet dancer girl with long hair in a red dress two legs and two arms'
-  sequences = [
-      f'{hero}, dreaming of a big city streets',
-      f'{hero}, walking in a big city streets',
-      f'{hero}, watching a building',
-      f'{hero}, dancing with a building',
-      f'a building turning into a huge burger',
-      f'{hero}, eating a burger',
-      f'a burger turning into a man shadow',
-      f'{hero}, watching a man shadow leaving',
-      f'sad {hero}, crying',
-      f'{hero}, disappearing in dust'
-  ]
+
+  artists =  ' and '.join([‘ivan aivazovsky’, ‘greg rutkowski’, ‘rutkowski’])
+  cues = '. '.join([‘digital art’, ‘hyper detailed, sharp focus, soft light’, ‘octane render’, ‘ray tracing’, ‘trending on artstation’])
+  container = ‘beautiful painting’
   prompts = [
-      f'{sequence},{qualifiers}'
-      for sequence in sequences
+    f’A {container} of {target} by {artists}, in style of {cues}’
+    for target in [
+      'a ballet dancer girl dreaming of a city',
+      'a ballet dancer girl walking in a city',
+      'a ballet dancer girl watching a big city building',
+      'a ballet dancer girl dancing a big city building',
+      'a big city building turning into a huge burger',
+      'a ballet dancer girl eating a huge burger',
+      'a huge burger turning into a man shadow',
+      'a ballet dancer girl watching a man shadow leaving',
+      'a ballet dancer girl crying in a city',
+      'a ballet dancer girl disappearing in dust',
+      # 0 to 45
+      'a ballet dancer girl spirit into space',
+      'a ballet dancer girl dancing with stars',
+      'a ballet dancer girl melting',
+      '',
+      'a big city building turning into a huge burger',
+      'a ballet dancer girl eating a huge burger',
+      'a huge burger turning into a man shadow',
+      'a ballet dancer girl watching a man shadow leaving',
+      'a ballet dancer girl crying in a city',
+      'a ballet dancer girl disappearing in dust',
+    ]
   ]
-  fps = 25
-  # Convert seconds to frames
+ 
+  audio_offsets = list(range(0, 50, 5))
+  fps = 30
   num_interpolation_steps = [(b-a) * fps for a, b in zip(audio_offsets, audio_offsets[1:])]
+  seeds = [random.randint(10, 6954010) for _ in range(len(prompts))]
+ 
   video_path = pipeline.walk(
       prompts=prompts,
-      seeds=[42, 1337],
+      seeds=seeds,
       num_interpolation_steps=num_interpolation_steps,
       height=512,                            # use multiples of 64
       width=512,                             # use multiples of 64
