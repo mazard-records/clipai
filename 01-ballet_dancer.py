@@ -1,9 +1,13 @@
+from os import environ
+
 import torch
 
 from huggingface_hub import notebook_login
+from huggingface_hub.hf_api import HfFolder
 from stable_diffusion_videos import StableDiffusionWalkPipeline, Interface
 
 if __name__ == '__main__':
+  HfFolder.save_token(environ.get('HF_TOKEN'))
   pipeline = StableDiffusionWalkPipeline.from_pretrained(
       'runwayml/stable-diffusion-v1-5',
       vae=AutoencoderKL.from_pretrained(f"stabilityai/sd-vae-ft-ema"),
