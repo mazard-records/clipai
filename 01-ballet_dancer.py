@@ -5,26 +5,32 @@ from stable_diffusion_videos import StableDiffusionWalkPipeline, Interface
 
 if __name__ == '__main__':
   pipeline = StableDiffusionWalkPipeline.from_pretrained(
-      "CompVis/stable-diffusion-v1-4",
+      'runwayml/stable-diffusion-v1-5',
+      vae=AutoencoderKL.from_pretrained(f"stabilityai/sd-vae-ft-ema"),
       torch_dtype=torch.float16,
       revision="fp16",
+      safety_checker=None,
+      scheduler=LMSDiscreteScheduler(
+          beta_start=0.00085, beta_end=0.012, beta_schedule="scaled_linear"
+      )
   ).to("cuda")
   interface = Interface(pipeline)
   # Seconds in the song
   duration = 240
   audio_offsets = [0, 5, 10, 15, 20, 25, 30, 35, 40] # list(range(0, duration, 2))
-  qualifiers = ','.join(['anime', 'ghibli', 'oil painting' 'high resolution', 'detailed', '4K', 'vivid colors'])
+  qualifiers = ','.join(['anime', 'ghibli', 'oil painting' 'high resolution', 'detailed', '4K'])
+  hero = 'ballet dancer girl with long hair in a red dress two legs and two arms'
   sequences = [
-      'a ballet dancer girl dreaming of a big city streets',
-      'a ballet dancer girl walking in a big city streets',
-      'a ballet dancer girl watching a building',
-      'a ballet dancer girl dancing with a building',
-      'a building turning into a huge burger',
-      'a ballet dancer girl eating a burger',
-      'a burger turning into a man shadow',
-      'a ballet dancer girl watching a man shadow leaving',
-      'a sad ballet dancer girl crying',
-      'a ballet dancer girl disappearing in dust'
+      f'{hero}, dreaming of a big city streets',
+      f'{hero}, walking in a big city streets',
+      f'{hero}, watching a building',
+      f'{hero}, dancing with a building',
+      f'a building turning into a huge burger',
+      f'{hero}, eating a burger',
+      f'a burger turning into a man shadow',
+      f'{hero}, watching a man shadow leaving',
+      f'sad {hero}, crying',
+      f'{hero}, disappearing in dust'
   ]
   prompts = [
       f'{sequence},{qualifiers}'
