@@ -20,7 +20,7 @@ class Settings(BaseSettings):
 class RenderingStyle(BaseModel):
     artists: List[str]
     container: str
-    curs: List[str]
+    cues: List[str]
 
     def to_prompt_template(self) -> str:
         return ''.join([
