@@ -1,4 +1,5 @@
-FROM python
+ARG BASE=python:3.9
+FROM ${BASE}
 
 RUN mkdir -p /workspace
 RUN git config --global credential.helper store
