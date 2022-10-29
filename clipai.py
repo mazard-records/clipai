@@ -88,7 +88,7 @@ def entrypoint(
         num_interpolation_steps=steps,
         height=512,
         width=512,
-        audio_filepath=audio_path,
+        audio_filepath=str(audio_path),
         audio_start_sec=offsets[0],
         fps=configuration.fps,
         batch_size=batch_size,
