@@ -1,0 +1,5 @@
+pydantic
+pyyaml
+realesrgan
+stable_diffusion_videos[realesrgan]
+typer

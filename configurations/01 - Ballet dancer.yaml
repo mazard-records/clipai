@@ -1,0 +1,33 @@
+name: ballet-dancer
+duration: 70
+fps: 30
+style:
+  artists:
+    - ivan aivazovsky
+    - greg rutkowski
+    - rhads
+  container: beautiful painting
+  cues:
+    - digital art
+    - hyper detailed, sharp focus, soft light
+    - octane render
+    - ray tracing
+    - trending on artstation
+prompts:
+  duration: 10
+  sentences:
+    # 0:00
+    - a ballet dancer girl in a city
+    - a ballet dancer girl watching a skyscraper
+    - a ballet dancer girl dancing with a skyscraper
+    - a ballet dancer girl flying between skyscrapers
+    - a ballet dancer girl watching a skyscraper turning into dust
+    - a ballet dancer girl crying
+    # 1:00
+  seeds:
+    - 2308583014
+    - 588800489
+    - 3503599767
+    - 1942957757
+    - 4022014393
+    - 137147676
