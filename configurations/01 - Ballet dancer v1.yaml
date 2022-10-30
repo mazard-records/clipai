@@ -1,0 +1,78 @@
+name: ballet-dancer
+duration: 140
+fps: 30
+style:
+  artists:
+    - ivan aivazovsky
+    - greg rutkowski
+    - rhads
+  container: beautiful painting
+  cues:
+    - digital art
+    - hyper detailed, sharp focus, soft light
+    - octane render
+    - ray tracing
+    - trending on artstation
+prompts:
+  duration: 5
+  sentences:
+    # 0:00
+    - a ballet dancer girl in a city with skyscrapers
+    - a ballet dancer girl watching a skyscraper
+    - a skyscraper turning into dust
+    - a ballet dancer girl flying between skyscrapers
+    - a ballet dancer girl dancing with a skyscraper
+    - a skyscraper turning into a man shadow
+    # 0:30
+    - a ballet dancer girl watching a man shadow leaving
+    - a ballet dancer girl crying
+    - a ballet dancer transforming into dust
+    - people gathering in a modern city
+    - a ballet dancer girl appearing in a modern city with skyscrapers
+    - a ballet dancer girl dancing on a car in a modern city with skyscrapers
+    # 1:00
+    - a man watching a ballet dancer girl dancing on a car in a modern city with skyscrapers
+    - a man dancing with a ballet dancer girl in a modern city with skyscrapers
+    - a ballet dancer girl watching a man running on a street in a modern city with skyscrapers
+    - a ballet dancer girl crying in the street of a modern city with skyscrapers
+    - people gathering watching a ballet dancer girl crying in the street of a modern city with skyscrapers
+    - skyscrapers exploding in a modern city
+    # 1:30
+    - a ballet dancer girl watching skyscrapers exploding in a modern city
+    - a ballet dancer girl walking in apocalyptic modern city ruins with skyscrapers
+    - a ballet dancer girl dancing in apocalyptic modern city ruins with skyscrapers
+    - fire in apocalyptic modern city ruins with skyscrapers
+    - a ballet dancer girl dancing with a fire in apocalyptic modern city ruins with skyscrapers
+    - huge crowd chasing a ballet dancer girl in apocalyptic modern city ruins with skyscrapers
+    # 2:00
+    - huge crowd chasing a ballet dancer girl in apocalyptic modern city ruins with skyscrapers
+  seeds:
+    - 6871596188
+    - 7042399203
+    - 4066412822
+    - 7484131661
+    - 3425344691
+    - 3779981234
+    # 0:30
+    - 7163318970
+    - 7148941744
+    - 3335470119
+    - 424907643
+    - 1443134491
+    - 4057041699
+    # 1:00
+    - 3203647685
+    - 2946051614
+    - 3242044010
+    - 1770368975
+    - 1083613330
+    - 2302456704
+    # 1:30
+    - 4064931144
+    - 3468388550
+    - 4246302026
+    - 255159525
+    - 989365904
+    - 2901379816
+    # 2:00
+    - 2901379816
