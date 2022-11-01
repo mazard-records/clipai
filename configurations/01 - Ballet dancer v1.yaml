@@ -1,5 +1,5 @@
 name: ballet-dancer
-duration: 245
+duration: 290
 fps: 30
 style:
   artists:
@@ -51,15 +51,38 @@ prompts:
     - a duck flying away from a ballet dancer girl in a modern city with skyscrapers
     - a ballet dancer crying on the floor
     - a ballet dancer turning into a duck in the middle of the street
-    # 3:00
+    # 2:30
     - a ballet dancer duck dancing in a modern city with skyscrapers
     - people gathering watching a ballet dancer duck dancing in a modern city with skyscrapers
     - a couple of ballet dancer duck dancing together in a modern city with skyscrapers
     - an army of angry ballet duck destroying a modern city with skyscrapers
     - a ballet dancer girl watching duck on television in a castle
     - a ballet dancer girl dancing in her castle
+    # 3:00
+    - a ballet dancer girl dancing outside a modern castle surrounded by skyscrapers
+    - an helicopter flying over a modern castle surrounded by skyscrapers
+    - a man with a gun getting out of an helicopter flying over a modern castle surrounded by skyscrapers
+    - a man with a gun chasing a ballet dancer girl in a modern city
+    - a duck with a tutu fighting a man with a gun in a modern city
+    - a man shooting a duck with a tutu in a modern city
+    # 3:30
+    - a man with a gun running away 
+    - a ballet dancer girl crying on top of a dead duck with a tutu in a modern city
+    - a ballet dancer girl leading an army of duck with tutu in a modern city
+    - an army of duck with tutu fighting a man with a gun in a modern city
+    - a ballet dancer girl watching an army of duck with tutu in a modern city
+    - a ballet dancer girl leaving a modern city
     # 4:00
-    - a ballet dancer girl dancing in her castle
+    - a ballet dancer girl dancing on the beach by night
+    - a ballet dancer girl on the beach watching the moon
+    - a moon shaped like a duck with a tutu
+    - a ballet dancer girl watching a moon shaped like a duck with a tutu
+    - a ballet dancer girl flying to the moon
+    - a ballet dancer girl dancing with the moon shaped duck
+    # 4:30
+    - a ballet dancer girl disappear
+    - a tutu in a middle of a modern city with skyscrapers
+    # 4:40
   seeds:
     - 6871596188
     - 7042399203
@@ -95,12 +118,34 @@ prompts:
     - 6134516715
     - 3289540872
     - 3337964182
-    # 3:00
+    # 2:30
     - 6049361016
     - 7009402533
     - 5375219629
     - 5626090476
     - 3719506224
     - 4711424131
-    # 4:00
+    # 3:00
     - 8595469072
+    - 7586735906
+    - 3487503041
+    - 9581893232
+    - 4762233921
+    - 2562965211
+    # 3:30
+    - 694001957
+    - 1409548227
+    - 7429380892
+    - 3119132852
+    - 9171276382
+    - 6763034742
+    # 4:00
+    - 7740895869
+    - 6348369113
+    - 6445560857
+    - 2301744480
+    - 2162929934
+    - 5652287726
+    # 4:30
+    - 6710142270
+    - 8913331129
