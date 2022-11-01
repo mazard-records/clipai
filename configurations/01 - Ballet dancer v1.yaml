@@ -1,5 +1,5 @@
 name: ballet-dancer
-duration: 240
+duration: 245
 fps: 30
 style:
   artists:
@@ -58,6 +58,8 @@ prompts:
     - an army of angry ballet duck destroying a modern city with skyscrapers
     - a ballet dancer girl watching duck on television in a castle
     - a ballet dancer girl dancing in her castle
+    # 4:00
+    - a ballet dancer girl dancing in her castle
   seeds:
     - 6871596188
     - 7042399203
@@ -100,3 +102,5 @@ prompts:
     - 5626090476
     - 3719506224
     - 4711424131
+    # 4:00
+    - 8595469072
